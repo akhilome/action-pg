@@ -1,5 +1,5 @@
 {
-  "access_token": "__ACCESS__TOKEN__",
+  "access_token": "__ACCESS_TOKEN__",
   "refresh_token": "__REFRESH_TOKEN__",
   "scope": "https://example.com",
   "token_type": "Bearer",

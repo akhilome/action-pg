@@ -13,4 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Create Config file
-        run: cat config.template.json
+        run: |
+          sed \
+          -e "s|__ACCESS_TOKEN__|$ACCESS_TOKEN|" \
+          -e "s|__REFRESH_TOKEN__|$REFRESH_TOKEN|" \
+          config.template.json > config.json \
+          && cat config.json
