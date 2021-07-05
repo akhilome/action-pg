@@ -14,10 +14,13 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v2
-      - name: Create Config file
+      - name: Create Config file 🔥
         run: |
+          echo "Creating config.json file from config.template.json ..." && \
           sed \
           -e "s|__ACCESS_TOKEN__|$ACCESS_TOKEN|" \
           -e "s|__REFRESH_TOKEN__|$REFRESH_TOKEN|" \
-          config.template.json > config.json \
-          && cat config.json
+          config.template.json > config.json && \
+          echo "config.json file created"
+      - name: View config file contents
+        run: cat config.json
