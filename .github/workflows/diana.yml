@@ -1,0 +1,16 @@
+name: "Testing dynamically generating JSON"
+on:
+  push:
+    branches:
+      - master
+env:
+  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+
+jobs:
+  create_config:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create Config file
+        run: cat config.template.json
