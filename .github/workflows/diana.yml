@@ -4,10 +4,8 @@ on:
     branches:
       - master
 env:
-  # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-  # REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
-  ACCESS_TOKEN: "meech"
-  REFRESH_TOKEN: "meek"
+  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
 
 jobs:
   create_config:
