@@ -1,0 +1,7 @@
+{
+  "access_token": "__ACCESS_TOKEN__",
+  "refresh_token": "__REFRESH_TOKEN__",
+  "scope": "https://example.com",
+  "token_type": "Bearer",
+  "expiry_date": 122345566
+}

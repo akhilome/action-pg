@@ -22,3 +22,13 @@ jobs:
           echo "config.json file created"
       - name: View config file contents
         run: cat config.json
+      - name: Create Config file in nested dir
+        run: |
+          echo "Creating config.json file from config.sample.json ..." && \
+          sed \
+          -e "s|__ACCESS_TOKEN__|$ACCESS_TOKEN|" \
+          -e "s|__REFRESH_TOKEN__|$REFRESH_TOKEN|" \
+          ./cypress/plugins/config.sample.json > ./cypress/plugins/config.json && \
+          echo "config.json file created"
+      - name: View config file contents in nested dir
+        run: cat ./cypress/plugins/config.json
